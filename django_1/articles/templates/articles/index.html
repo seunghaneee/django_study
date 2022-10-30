@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>만나서 반가워요!</h1>
+  <a href="{% url 'articles:greeting' %}">greeting</a>
+  <a href="{% url 'articles:dinner' %}">dinner</a>
+  <a href="{% url 'articles:throw' %}">throw</a>
+  <hr>
+  <a href="{% url 'pages:index' %}">두번째 앱 pages의 index페이지</a>
+
+{% endblock content %}

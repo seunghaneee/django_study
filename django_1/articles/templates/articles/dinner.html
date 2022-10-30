@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>{{ pick }}은 {{ pick|length }}글자</p>
+  <p>{{ foods|join:", " }}</p>
+  <hr>
+  <p>메뉴판</p>
+  <ul>
+    {% for food in foods %}
+      <li>{{ food }}</li>
+    {% endfor %}
+  </ul>
+
+  {# 이것은 주석입니다. #}
+  {% comment %}
+    <p>여러 줄</p>  
+    <p>주석</p>
+    <p>입니다.</p>
+  {% endcomment %}
+  <a href="{% url 'articles:index' %}">뒤로</a>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Catch</h1>
+  {% comment %} <h2>여기서 데이터 받음!!</h2> {% endcomment %}
+  <h2>여기서 {{ message }}를 받았어!!</h2>
+  {% comment %} <a href="/throw/">다시 던지러 가기</a> {% endcomment %}
+  <a href="{% url 'articles:throw' %}">다시 던지러 가기</a>
+{% endblock content %}
